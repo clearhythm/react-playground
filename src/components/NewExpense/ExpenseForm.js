@@ -25,7 +25,9 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
+    // pass the expenseData object to the parent component (NewExpense.js)
+    props.onSaveNewExpense(expenseData);
+
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');

@@ -5,7 +5,7 @@ import ExpensesFilter from './ExpensesFilter';
 import './Expenses.css';
 
 function Expenses(props) {
-  const [selectedYear, setSelectedYear] = React.useState('2022');
+  const [selectedYear, setSelectedYear] = React.useState('2020');
 
   const filterExpensesHandler = (selectedYear) => {
     setSelectedYear(selectedYear);
@@ -14,7 +14,7 @@ function Expenses(props) {
   return (
     <div>
       <Card className="expenses">
-        <ExpensesFilter onFilterExpenses={filterExpensesHandler} />
+        <ExpensesFilter onFilterExpenses={filterExpensesHandler} selected={selectedYear} />
         {props.expenses.map((expense) => (
           <ExpenseItem
             key = {expense.id}

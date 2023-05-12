@@ -8,9 +8,7 @@ function Expenses(props) {
   const [selectedYear, setSelectedYear] = React.useState('2022');
 
   const filterExpensesHandler = (selectedYear) => {
-    // TODO: Update it to use a function call
     setSelectedYear(selectedYear);
-    console.log('year:', selectedYear);
   }
 
   return (

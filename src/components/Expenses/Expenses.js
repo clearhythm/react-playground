@@ -13,8 +13,8 @@ function Expenses(props) {
 
   return (
     <div>
-      <ExpensesFilter onFilterExpenses={filterExpensesHandler} />
       <Card className="expenses">
+        <ExpensesFilter onFilterExpenses={filterExpensesHandler} />
         {props.expenses.map((expense) => (
           <ExpenseItem
             key = {expense.id}

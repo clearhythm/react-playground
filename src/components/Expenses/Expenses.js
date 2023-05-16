@@ -19,6 +19,7 @@ function Expenses(props) {
     <div>
       <Card className="expenses">
         <ExpensesFilter onFilterExpenses={filterExpensesHandler} selected={selectedYear} />
+        {filteredExpenses.length === 0 && <p className="expenses-empty">No expenses found.</p>}
         {filteredExpenses.map((expense) => (
           <ExpenseItem
             key = {expense.id}
